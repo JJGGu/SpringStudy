@@ -9,7 +9,6 @@ import org.springframework.stereotype.Component;
  * @create: 2020-05-26 09:34
  **/
 
-@Component
 public class Cat {
     public void bark(){
         System.out.println("miaomiaomiao");

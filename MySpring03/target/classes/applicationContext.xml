@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean id="service" class="com.study.service.ServiceImpl"/>
+    <bean id="beforeLog" class="com.study.log.MethodBeforeLog"/>
+    <bean id="afterLog" class="com.study.log.MethodAfterLog"/>
+    <bean id="diy" class="com.study.diy.Diy2"/>
+
+    <aop:aspectj-autoproxy/>
+
+    <!--方式一-->
+<!--    <aop:config>
+        &lt;!&ndash;切入点&ndash;&gt;
+        <aop:pointcut id="pointcut" expression="execution(* com.study.service.ServiceImpl.*(..))"/>
+        &lt;!&ndash;环绕增加&ndash;&gt;
+        <aop:advisor advice-ref="beforeLog" pointcut-ref="pointcut"/>
+        <aop:advisor advice-ref="afterLog" pointcut-ref="pointcut"/>
+    </aop:config>-->
+
+    <!--方式二-->
+<!--    <aop:config>
+        <aop:aspect ref="diy">
+            <aop:pointcut id="point" expression="execution(* com.study.service.ServiceImpl.*(..))"/>
+
+            <aop:before method="before" pointcut-ref="point"/>
+            <aop:after method="after" pointcut-ref="point"/>
+        </aop:aspect>
+    </aop:config>-->
+</beans>
