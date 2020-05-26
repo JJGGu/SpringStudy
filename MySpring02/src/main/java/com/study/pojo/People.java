@@ -1,6 +1,7 @@
 package com.study.pojo;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
@@ -10,10 +11,11 @@ import javax.annotation.Resource;
  * @author: JJGGu
  * @create: 2020-05-26 09:34
  **/
+@Component
 public class People {
-    @Resource
+    @Autowired
     private Cat cat;
-    @Resource
+    @Autowired
     private Dog dog;
 
     public People() {
