@@ -9,6 +9,7 @@
         <module name="MySpring03" />
         <module name="MySpring02" />
         <module name="MySpring01" />
+        <module name="MySpring-Mybatis" />
       </profile>
     </annotationProcessing>
   </component>
