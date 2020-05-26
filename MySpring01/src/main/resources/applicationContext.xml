@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="user" class="com.study.pojo.User">
+        <constructor-arg index="0" value="Spring"/>
+        <constructor-arg index="1" value="Summer"/>
+    </bean>
+
+    <bean id="address" class="com.study.pojo.Address">
+        <constructor-arg index="0" value="海淀区"/>
+    </bean>
+
+    <bean id="student" class="com.study.pojo.Student">
+        <property name="name" value="xiaoming"/>
+        <property name="address" ref="address"/>
+        <property name="books">
+            <array>
+                <value>book1</value>
+                <value>book2</value>
+            </array>
+        </property>
+        <property name="hobbys">
+            <list>
+                <value>Music</value>
+            </list>
+        </property>
+        <property name="card">
+            <map>
+                <entry key="1" value="2019920"/>
+                <entry key="2" value="2018321"/>
+            </map>
+        </property>
+        <property name="games">
+            <set>
+                <value>set1111</value>
+            </set>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="prop1">this is prop1 values</prop>
+            </props>
+        </property>
+
+        <property name="wife">
+            <null/>
+        </property>
+    </bean>
+
+</beans>
