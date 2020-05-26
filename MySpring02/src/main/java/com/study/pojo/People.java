@@ -1,5 +1,9 @@
 package com.study.pojo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.annotation.Resource;
+
 /**
  * @program: SpringStudy
  * @description:
@@ -7,7 +11,9 @@ package com.study.pojo;
  * @create: 2020-05-26 09:34
  **/
 public class People {
+    @Resource
     private Cat cat;
+    @Resource
     private Dog dog;
 
     public People() {

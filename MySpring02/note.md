@@ -1,3 +1,5 @@
+## applicationContext 配置
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -9,11 +11,9 @@
 
     <context:annotation-config/>
 
-    <bean id="cat" class="com.study.pojo.Cat"/>
-    <bean id="cat11" class="com.study.pojo.Cat"/>
-    <bean id="dog" class="com.study.pojo.Dog"/>
-    <bean id="dog11" class="com.study.pojo.Dog"/>
-    <bean id="dog22" class="com.study.pojo.Dog"/>
-    <bean id="people" class="com.study.pojo.People"/>
-
 </beans>
+```
+## 注解说明
+- @Autowired :自动装配通过类型、名字，如果不能唯一自动装配，则需要使用@Qualifier(value="xxx")
+- @Nullable  :字段标记这个注解说明可以为空
+- @Resource  :自动装配通过名字、类型。
